@@ -1,8 +1,0 @@
-import sys
-import shutil
-
-source_dir = sys.argv[1]
-dest_dir = sys.argv[2]
-
-shutil.copytree(source_dir, dest_dir, dirs_exist_ok=True)
-print("Backup complete!")
