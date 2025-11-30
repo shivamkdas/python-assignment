@@ -1,0 +1,15 @@
+import psutil
+import time
+
+print("Monitoring CPU usage...")
+
+threshold = 80  # Alert if CPU usage > 80%
+
+while True:
+    cpu_usage = psutil.cpu_percent(interval=1)
+    print("CPU: " + str(cpu_usage) + "%") 
+    
+    if cpu_usage > threshold:
+        print("Alert! CPU usage exceeds threshold: " + str(cpu_usage) + "%")
+    
+    time.sleep(2)
